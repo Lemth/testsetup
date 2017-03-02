@@ -1,8 +1,22 @@
 /// @description Controller bank
 
 if(room==room_menu || room==room_options || room==room_about) { // if in menu, then menu controls - else go player
-	
-	// not sure if I ned this. check keys mouse and gp
+	with(obj_menu) { // parent object! (sooo clever <3)
+		if(keyboard_check_pressed(vk_up)||keyboard_check_pressed(ord("W"))) {
+			pos_move-=1;
+		} 
+		if(keyboard_check_pressed(vk_down)||keyboard_check_pressed(ord("S"))) {
+			pos_move+=1;
+		} 
+		// loop around array.
+		if(keyboard_check_pressed(vk_enter)||keyboard_check_pressed(vk_space)) {
+			//gotoroom from array
+		}
+		if(keyboard_check_pressed(vk_esc)) {
+			//previous room OR QUIT :'(	
+		}
+		//(in object check mousexmousey vs prevmousexprevmousey, also mouseclicks)
+	}
 	
 } else { // ... [ - else go player ]
 
