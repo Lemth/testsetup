@@ -7,8 +7,9 @@ mouse_check_button_pressed(mb_any) {
 		
 		if(mouse_check_button(mb_left)&&mouse_check_button(mb_right)) {
 			
-			scr_new_player(9);
-			new_player.keyset=current_keyset; // set/lease keyset (>-1 == player controlled)
+			if(scr_new_player(9)) {
+				new_player.keyset=current_keyset; // set/lease keyset (>-1 == player controlled)
+			}
 		}
 		exit; // prevent rest of code cause already found potentional new player this step
 	}
@@ -24,8 +25,9 @@ if(keyboard_check_pressed(vk_anykey)) {
 					
 					if(keyboard_check(ctrl[i,0])&&keyboard_check(ctrl[i,1])) {
 						
-						scr_new_player(i,ctrl[i,0],ctrl[i,1]); // also send specific keys
-						new_player.keyset=current_keyset; // set/lease keyset (>-1 == player controlled)
+						if(scr_new_player(i,ctrl[i,0],ctrl[i,1])) { // also send specific keys
+							new_player.keyset=current_keyset; // set/lease keyset (>-1 == player controlled)
+						}
 						
 						i=999;j=999; // break loop
 					}
@@ -52,8 +54,9 @@ if(maxpads>0) {
 				if((gamepad_button_check(i,gp_shoulderl)||gamepad_button_check(i,gp_shoulderlb))
 				 &&(gamepad_button_check(i,gp_shoulderr)||gamepad_button_check(i,gp_shoulderrb))) {
 					
-					scr_new_player(10+i);
-					new_player.keyset=current_keyset; // set/lease keyset (>-1 == player controlled)
+					if(scr_new_player(10+i)) {
+						new_player.keyset=current_keyset; // set/lease keyset (>-1 == player controlled)
+					}
 				}
 				exit; // prevent rest of code cause already found potentional new player this step
 			}
@@ -67,12 +70,13 @@ if(maxpads>0) {
 /// @arg keysets
 /// @arg button1 (for keyboard only)
 /// @arg button2 (for keyboard only)
+/// return true if new_player was found
 
 current_keyset=argument[0]; // needed outside script
 
 new_player=scr_find_new_player(); // needed outside script
 
-if(new_player!=-1) {
+if(new_player!=-4) {
 	new_player.showkeys=current_keyset; // show keyset
 	
 	if(current_keyset==9) {
@@ -84,6 +88,10 @@ if(new_player!=-1) {
 		new_player.button2=argument[2];
 		new_player.ctrl_script="ctrl_keyboard";	
 	}
+	
+	return(true);
+} else {
+	return(false);	
 }
 	
 	
@@ -91,6 +99,14 @@ if(new_player!=-1) {
 /// @desc scr_find_new_player()
 /// return (new_player) instance_id
 
-// FIND AVAILABLE PLAYER AND RETURN ID OR RETURN -1
-
-return(id);
+if(global.player2.keyset<0) {
+	return(global.player2);
+} else if(global.player3.keyset<0) {
+	return(global.player3);
+} else if(global.player1.keyset<0) {
+	return(global.player1);
+} else if(global.player4.keyset<0) {
+	return(global.player4);
+} else {
+	return(-4); // all players are taken
+}
