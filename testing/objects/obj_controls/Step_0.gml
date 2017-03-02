@@ -62,76 +62,30 @@ if(room==room_menu || room==room_options || room==room_about) { // if in menu, t
 	}
 
 	if(maxpads>0) {
-			for(var i=0; i<maxpads; i++) {
-				if(ctrl_lease[10+i]==false) {
-					if(gamepad_button_check_pressed(i,gp_face1)||gamepad_button_check_pressed(i,gp_face2)
-					 ||gamepad_button_check_pressed(i,gp_face3)||gamepad_button_check_pressed(i,gp_face4)
-					 ||gamepad_button_check_pressed(i,gp_shoulderl)||gamepad_button_check_pressed(i,gp_shoulderr)
-					 ||gamepad_button_check_pressed(i,gp_shoulderlb)||gamepad_button_check_pressed(i,gp_shoulderrb)
-					 ||gamepad_button_check_pressed(i,gp_padl)||gamepad_button_check_pressed(i,gp_padr)
-					 ||gamepad_button_check_pressed(i,gp_padu)||gamepad_button_check_pressed(i,gp_padd)
-					 ||gamepad_button_check_pressed(i,gp_stickl)||gamepad_button_check_pressed(i,gp_stickr)) {
+		for(var i=0; i<maxpads; i++) {
+			if(ctrl_lease[10+i]==false) {
+				if(gamepad_button_check_pressed(i,gp_face1)||gamepad_button_check_pressed(i,gp_face2)
+					||gamepad_button_check_pressed(i,gp_face3)||gamepad_button_check_pressed(i,gp_face4)
+					||gamepad_button_check_pressed(i,gp_shoulderl)||gamepad_button_check_pressed(i,gp_shoulderr)
+					||gamepad_button_check_pressed(i,gp_shoulderlb)||gamepad_button_check_pressed(i,gp_shoulderrb)
+					||gamepad_button_check_pressed(i,gp_padl)||gamepad_button_check_pressed(i,gp_padr)
+					||gamepad_button_check_pressed(i,gp_padu)||gamepad_button_check_pressed(i,gp_padd)
+					||gamepad_button_check_pressed(i,gp_stickl)||gamepad_button_check_pressed(i,gp_stickr)) {
 
-						scr_new_player(10+i);
+					scr_new_player(10+i);
 
-						if((gamepad_button_check(i,gp_shoulderl)||gamepad_button_check(i,gp_shoulderlb))
-						 &&(gamepad_button_check(i,gp_shoulderr)||gamepad_button_check(i,gp_shoulderrb))) {
+					if((gamepad_button_check(i,gp_shoulderl)||gamepad_button_check(i,gp_shoulderlb))
+						&&(gamepad_button_check(i,gp_shoulderr)||gamepad_button_check(i,gp_shoulderrb))) {
 
-							if(scr_new_player(10+i)) {
-								new_player.keyset=current_keyset; // set/lease keyset (>-1 == player controlled)
-							}
+						if(scr_new_player(10+i)) {
+							new_player.keyset=current_keyset; // set/lease keyset (>-1 == player controlled)
 						}
-						exit; // prevent rest of code cause already found potentional new player this step
 					}
+					exit; // prevent rest of code cause already found potentional new player this step
 				}
 			}
 		}
-
 	}
-	
-}
 
-/// @desc scr_new_player()
-/// @arg keysets
-/// @arg button1 (for keyboard only)
-/// @arg button2 (for keyboard only)
-/// return true if new_player was found
-
-current_keyset=argument[0]; // needed outside script
-
-new_player=scr_find_new_player(); // needed outside script
-
-if(new_player!=-4) {
-	new_player.showkeys=current_keyset; // show keyset
-	
-	if(current_keyset==9) {
-		new_player.ctrl_script="ctrl_mouse";
-	} else if(current_keyset>=10) {
-		new_player.ctrl_script="ctrl_gamepad";
-	} else if(current_keyset>=0 && argument_count==3) {
-		new_player.button1=argument[1];
-		new_player.button2=argument[2];
-		new_player.ctrl_script="ctrl_keyboard";	
-	}
-	
-	return(true);
-} else {
-	return(false);	
 }
 	
-	
-	
-/// @desc scr_find_new_player()
-/// return (new_player) instance_id
-
-if(global.player2.keyset<0) {
-	return(global.player2);
-} else if(global.player3.keyset<0) {
-	return(global.player3);
-} else if(global.player1.keyset<0) {
-	return(global.player1);
-} else if(global.player4.keyset<0) {
-	return(global.player4);
-} else {
-	return(-4); // all players are taken
-}
