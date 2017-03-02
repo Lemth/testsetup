@@ -55,12 +55,14 @@ button2=-1; // button2 (for keyboard only)
 
 state="game_wait"; // player gamestate
 
-// PLAYER GAME VARIABLES
+// PLAYER GAME VARIABLES - use these instead of ingame and all will be easy)
 player_hspd=0;
 player_vspd=0;
 player_but1=0;
 player_but2=0;
-
+player_angl=0;
+player_xpos=0;
+player_ypos=0;
 
 
 /// @desc ALARM IF PLAYER INACTIVE FOR PERIOD THEN obj_controls.ctrl_lease[keyset]=false && keyset=-1
@@ -70,3 +72,10 @@ keyset=-1; // back to AI
 
 
 /// @desc player STEP
+if(keyset>-1) {
+	script_execute(ctrl_script); // get input
+} else {
+	script_execute(asset_get_index("ai_"+asset_get_index(room)));		
+}
+
+script_execute(state); // execute current game
