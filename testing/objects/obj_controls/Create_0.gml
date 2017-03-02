@@ -1,5 +1,10 @@
 /// @description 0-8=KEY, 9=MOUSE, 10+=CONTROLLER
 
+// define
+new_player=-1;
+current_keyset=-1;
+
+
 ctrl[0,0]=vk_left;		ctrl[0,1]=vk_right;
 ctrl[0,2]=vk_up;		ctrl[0,3]=vk_down;
 
