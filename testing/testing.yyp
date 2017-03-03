@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "1c012497-2edf-4ffb-96fe-c397ce240047",
+            "Value": {
+                "id": "b3dc7ffa-4271-4a58-8ba5-ff55d86f333a",
+                "resourcePath": "scripts\\ctrl_keyboard\\ctrl_keyboard.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1ec950b5-1dd4-474e-9817-e3a41b9687ae",
             "Value": {
                 "id": "947a787b-f563-4f7b-bd01-16fd63c846ed",
@@ -199,6 +207,14 @@
             }
         },
         {
+            "Key": "891f07b6-b832-4fbf-8f20-94c88a6e94b3",
+            "Value": {
+                "id": "52e99e0f-83c8-4185-9dde-7cbf1fb7b794",
+                "resourcePath": "scripts\\ctrl_mouse\\ctrl_mouse.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "90e16a33-c239-4a5c-bcb2-d7b21ec70927",
             "Value": {
                 "id": "f6414159-1368-476d-ad27-7722ddc9b16b",
@@ -319,6 +335,14 @@
             }
         },
         {
+            "Key": "f6d13cbe-825c-48d1-a240-b912522d2869",
+            "Value": {
+                "id": "176c66d7-e578-4e80-b89a-1a20db7dc53e",
+                "resourcePath": "scripts\\ctrl_controller\\ctrl_controller.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fb595ad6-e3a3-43ea-a739-b84f23b642f4",
             "Value": {
                 "id": "6dbfbd2a-a797-40c6-9215-90d0cb528e7d",
@@ -330,7 +354,10 @@
     "script_order": [
         "6975aa73-d84a-4323-b58a-01e5a8f7fc89",
         "6eb5dd58-727b-433a-acc2-f8cffc2f72ca",
-        "19f9c3be-d1fe-4556-92f9-c86dc3bcad05"
+        "19f9c3be-d1fe-4556-92f9-c86dc3bcad05",
+        "1c012497-2edf-4ffb-96fe-c397ce240047",
+        "891f07b6-b832-4fbf-8f20-94c88a6e94b3",
+        "f6d13cbe-825c-48d1-a240-b912522d2869"
     ],
     "tutorial": ""
 }
