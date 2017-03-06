@@ -1,0 +1,1 @@
+global.player2=id;

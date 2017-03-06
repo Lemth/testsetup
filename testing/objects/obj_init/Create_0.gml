@@ -1,6 +1,10 @@
 /// @description Initialize game
 
-//show_debug_overlay(true);
+show_debug_overlay(true);
+
+draw_set_valign(fa_middle);
+draw_set_halign(fa_center);
+draw_set_font(fnt_pix);
 
 // INIT GLOBAL VARS
 global.fullscreen=0; // fulscreen setting

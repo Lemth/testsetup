@@ -10,9 +10,9 @@ if(room==room_menu || room==room_options || room==room_about) { // if in menu, t
 		} 
 		// loop around array.
 		if(keyboard_check_pressed(vk_enter)||keyboard_check_pressed(vk_space)) {
-			//gotoroom from array
+			room_goto(room_start);
 		}
-		if(keyboard_check_pressed(vk_esc)) {
+		if(keyboard_check_pressed(vk_escape)) {
 			//previous room OR QUIT :'(	
 		}
 		//(in object check mousexmousey vs prevmousexprevmousey, also mouseclicks)
@@ -31,6 +31,7 @@ if(room==room_menu || room==room_options || room==room_about) { // if in menu, t
 
 					if(scr_new_player(9)) {
 						new_player.keyset=current_keyset; // set/lease keyset (>-1 == player controlled)
+						ctrl_lease[9]=true;
 					}
 				}
 				exit; // prevent rest of code cause already found potentional new player this step
@@ -50,6 +51,7 @@ if(room==room_menu || room==room_options || room==room_about) { // if in menu, t
 
 							if(scr_new_player(i,ctrl[i,0],ctrl[i,1])) { // also send specific keys
 								new_player.keyset=current_keyset; // set/lease keyset (>-1 == player controlled)
+								ctrl_lease[i]=true;
 							}
 
 							i=999;j=999; // break loop
@@ -63,25 +65,28 @@ if(room==room_menu || room==room_options || room==room_about) { // if in menu, t
 
 	if(maxpads>0) {
 		for(var i=0; i<maxpads; i++) {
-			if(ctrl_lease[10+i]==false) {
-				if(gamepad_button_check_pressed(i,gp_face1)||gamepad_button_check_pressed(i,gp_face2)
-					||gamepad_button_check_pressed(i,gp_face3)||gamepad_button_check_pressed(i,gp_face4)
-					||gamepad_button_check_pressed(i,gp_shoulderl)||gamepad_button_check_pressed(i,gp_shoulderr)
-					||gamepad_button_check_pressed(i,gp_shoulderlb)||gamepad_button_check_pressed(i,gp_shoulderrb)
-					||gamepad_button_check_pressed(i,gp_padl)||gamepad_button_check_pressed(i,gp_padr)
-					||gamepad_button_check_pressed(i,gp_padu)||gamepad_button_check_pressed(i,gp_padd)
-					||gamepad_button_check_pressed(i,gp_stickl)||gamepad_button_check_pressed(i,gp_stickr)) {
+			if (gamepad_is_connected(i)) {
+				if(ctrl_lease[10+i]==false) {
+					if(gamepad_button_check_pressed(i,gp_face1)||gamepad_button_check_pressed(i,gp_face2)
+						||gamepad_button_check_pressed(i,gp_face3)||gamepad_button_check_pressed(i,gp_face4)
+						||gamepad_button_check_pressed(i,gp_shoulderl)||gamepad_button_check_pressed(i,gp_shoulderr)
+						||gamepad_button_check_pressed(i,gp_shoulderlb)||gamepad_button_check_pressed(i,gp_shoulderrb)
+						||gamepad_button_check_pressed(i,gp_padl)||gamepad_button_check_pressed(i,gp_padr)
+						||gamepad_button_check_pressed(i,gp_padu)||gamepad_button_check_pressed(i,gp_padd)
+						||gamepad_button_check_pressed(i,gp_stickl)||gamepad_button_check_pressed(i,gp_stickr)) {
 
-					scr_new_player(10+i);
+						scr_new_player(10+i);
 
-					if((gamepad_button_check(i,gp_shoulderl)||gamepad_button_check(i,gp_shoulderlb))
-						&&(gamepad_button_check(i,gp_shoulderr)||gamepad_button_check(i,gp_shoulderrb))) {
+						if((gamepad_button_check(i,gp_shoulderl)||gamepad_button_check(i,gp_shoulderlb))
+							&&(gamepad_button_check(i,gp_shoulderr)||gamepad_button_check(i,gp_shoulderrb))) {
 
-						if(scr_new_player(10+i)) {
-							new_player.keyset=current_keyset; // set/lease keyset (>-1 == player controlled)
+							if(scr_new_player(10+i)) {
+								new_player.keyset=current_keyset; // set/lease keyset (>-1 == player controlled)
+								ctrl_lease[10+i]=true;
+							}
 						}
+						exit; // prevent rest of code cause already found potentional new player this step
 					}
-					exit; // prevent rest of code cause already found potentional new player this step
 				}
 			}
 		}

@@ -39,7 +39,7 @@ for(var i=0; i<=9; i++) {
 maxpads=gamepad_get_device_count();
 for(var i=0; i<maxpads; i++) {
     if (gamepad_is_connected(i)) {
-        ctrl_lease[i+10]=false;
+        ctrl_lease[10+i]=false;
     }
 }
 

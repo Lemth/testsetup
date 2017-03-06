@@ -15,7 +15,7 @@ if(new_player!=-4) {
 		new_player.ctrl_script="ctrl_mouse";
 	} else if(current_keyset>=10) {
 		new_player.ctrl_script="ctrl_gamepad";
-	} else if(current_keyset>=0 && argument_count==3) {
+	} else if(current_keyset>=0) {
 		new_player.button1=argument[1];
 		new_player.button2=argument[2];
 		new_player.ctrl_script="ctrl_keyboard";	
