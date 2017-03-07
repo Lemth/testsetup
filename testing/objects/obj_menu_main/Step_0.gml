@@ -20,11 +20,25 @@ for(var i=0; i<menu_length; i++) {
               enter=1; // set enter key as pressed (so mouse only works when hovering!!)                  
           }
    }
-                            
-    // cases for menu options here!                        
-                            
-                            
-                            
+    
+      // cases for menu options here!      
+      if(enter==1) { // if pressed enter (or did the mb click!)
+          switch(i) {
+             case 0: 
+                  room_goto(room_start); // start the game
+               break;
+             case 1:
+                  room_goto(room_options); // goto options
+               break;
+             case 2:
+                  game_end(); // end game. :'(
+               break;
+             default: break;
+          }
+      }
+    
+                 
+   // draw windows                            
    draw_sprite(menu_array[i],min(1,abs(menu_pos-i)),room_width*(i+1)/(menu_length+1),room_height/2);
 }
                             
