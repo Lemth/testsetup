@@ -2,20 +2,22 @@
 
 if(room==room_menu || room==room_options || room==room_about) { // if in menu, then menu controls - else go player
 	with(obj_menu) { // parent object! (sooo clever <3)
-		if(keyboard_check_pressed(vk_up)||keyboard_check_pressed(ord("W"))) {
-			pos_move-=1;
+		if(keyboard_check_pressed(vk_left)||keyboard_check_pressed(ord("A"))) {
+			menu_pos-=1;
 		} 
-		if(keyboard_check_pressed(vk_down)||keyboard_check_pressed(ord("S"))) {
-			pos_move+=1;
+		if(keyboard_check_pressed(vk_right)||keyboard_check_pressed(ord("D"))) {
+			menu_pos+=1;
 		} 
 		// loop around array.
 		if(keyboard_check_pressed(vk_enter)||keyboard_check_pressed(vk_space)) {
-			room_goto(room_start);
+			enter=1;
+		} else {
+			enter=0;	
 		}
 		if(keyboard_check_pressed(vk_escape)) {
-			//previous room OR QUIT :'(	
-		}
-		//(in object check mousexmousey vs prevmousexprevmousey, also mouseclicks)
+			room_goto(room_menu);	
+		} 
+		//(mouse in menuy
 	}
 	
 } else { // ... [ - else go player ]
