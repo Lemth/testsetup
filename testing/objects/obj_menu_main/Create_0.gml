@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+event_inherited();
+
 //room_goto(room_start);
 menu_array[0]=spr_playbutton; // play game |>
 menu_array[1]=spr_gearbutton; // options   -o-
