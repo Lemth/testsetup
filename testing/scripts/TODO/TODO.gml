@@ -43,7 +43,9 @@ d. different games codes (test hangen first)
 e. end room (with hangen first!)
 f. 
 ...
-x. add random keys (hold 3 sec)
+x. add random keys (hold 3 sec) ===== scrapped
 
+
+order; menu buttons, ctndown/finish, menu TEST, hangen TEST -> 
 
 */
