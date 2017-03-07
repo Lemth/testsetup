@@ -63,6 +63,16 @@ if(room==room_menu || room==room_options || room==room_about) { // if in menu, t
 				}
 			} 
 		}
+		/* // inteded for 3sec hold additional keybinds - scrapped for innefficiency.
+		i=10+maxpads; // set i to one beyond maxpads.
+		for(j=i; array_length_1d(ctrl_lease)<=j; j++) {
+			ctrl_lease[j]=false; // add extra keyboard value to the keyset table.
+		}
+		do {
+			
+			
+		} until (ctrl_lease[i]==false)
+		*/
 	}
 
 	if(maxpads>0) {
