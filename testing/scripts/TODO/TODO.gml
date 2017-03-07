@@ -38,7 +38,7 @@ SOUND
 CODE:
 a. test menu_main
 b. menu_options / menu_about
-c. left/right nav in obj_controls
+c. left/right nav in obj_controls ====== DONE
 d. different games codes (test hangen first)
 e. end room (with hangen first!)
 f. 
