@@ -29,6 +29,11 @@ for(var i=0; i<menu_length; i++) {
       if(enter==1) { // if pressed enter (or did the mb click!)
           switch(i) {
              case 0: 
+                  if(mouse_check_pressed(mb_left)) {
+                     alarm[9]=10;  // 10 step delay for adding mouse to player
+                  } else {
+                     alarm[0]=10;   // 10 step delay for adding keyboard to player
+                  }
                   room_goto(room_start); // start the game
                break;
              case 1:
@@ -48,3 +53,20 @@ for(var i=0; i<menu_length; i++) {
                             
                           
      
+/// @desc alarm[9] MOUSE
+      
+with(obj_controls) {
+   if(scr_new_player(9)) {
+         new_player.keyset=9; // set/lease keyset (>-1 == player controlled)
+         ctrl_lease[9]=true;
+   }  
+}
+      
+/// @desc alarm[0] keyboard
+with(obj_controls) {      
+   if(scr_new_player(0,vk_left,vk_right)) { // also send specific keys
+      new_player.keyset=0; // set/lease keyset (>-1 == player controlled)
+      ctrl_lease[0]=true;
+   }   
+}  
+   
