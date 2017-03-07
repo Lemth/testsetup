@@ -70,7 +70,7 @@
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
-            "hierarchyVisible": true,
+            "hierarchyVisible": false,
             "inheritLayerDepth": false,
             "inheritLayerSettings": false,
             "inheritSubLayers": false,
@@ -82,7 +82,7 @@
             "m_serialiseFrozen": false,
             "name": "Background",
             "userdefined_depth": false,
-            "visible": true,
+            "visible": false,
             "animationFPS": 15,
             "animationSpeedType": 0,
             "colour": {

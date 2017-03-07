@@ -43,3 +43,4 @@ for(var i=0; i<maxpads; i++) {
     }
 }
 
+set_first_player="";

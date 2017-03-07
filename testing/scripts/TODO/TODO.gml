@@ -23,9 +23,9 @@ room_menu (start | options (fs,reso,sound,about) | exit)
 ___________________________________
 
 GRAPHICS
-1. create menu buttons
-2. create countdown and 'finish' logos
-3. create backgrounds
+1. create menu buttons ======= DONE
+2. create countdown and 'finish' logos ======== placeholders
+3. create backgrounds ========== DONE!
 4. create room_end candy
 
 SOUND
@@ -36,16 +36,22 @@ SOUND
 - bell for start and level change
 
 CODE:
-a. test menu_main
+a. test menu_main ============ WORKS
 b. menu_options / menu_about
 c. left/right nav in obj_controls ====== DONE
 d. different games codes (test hangen first)
-e. end room (with hangen first!)
+e. end room (with hangen first!) =start
 f. 
 ...
 x. add random keys (hold 3 sec) ===== scrapped
 
 
 order; menu buttons, ctndown/finish, menu TEST, hangen TEST -> 
+
+new order: 
+code menu options & about
+code all game modes (fix hangen 0 )
+end screen count score.
+
 
 */

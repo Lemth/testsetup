@@ -3,6 +3,7 @@
 
 // mouse controls:
 // REQUIRED HERE?!?!?!?
+/*
 menu_length = array_length_1d(menu_array);
 
 for(var i=0; i<menu_length; i++) {
@@ -12,3 +13,4 @@ for(var i=0; i<menu_length; i++) {
             break; // break for loop if any found and set.
       }
 }
+*/

@@ -103,6 +103,23 @@ if(room==room_menu || room==room_options || room==room_about) { // if in menu, t
 			}
 		}
 	}
+	// first run only
+	if(set_first_player=="mouse") {
+		if(scr_new_player(9)) {
+         new_player.keyset=9; // set/lease keyset (>-1 == player controlled)
+         ctrl_lease[9]=true;
+		}  
+		set_first_player="";
+	} else if(set_first_player=="keyboard") {
+		if(scr_new_player(0,vk_left,vk_right)) { // also send specific keys
+		    new_player.keyset=0; // set/lease keyset (>-1 == player controlled)
+		    ctrl_lease[0]=true;
+		}   
+		set_first_player="";
+	}
+
+
+
 
 }
 	
