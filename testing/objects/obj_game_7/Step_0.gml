@@ -1,34 +1,34 @@
-/// @desc step hange 
-//step
-
+/// @desc DRAW werpen 
+//MOVE THIS ALL TO DRAW!!! EVERYTHING IN HERE!
+draw_sprite(spr_basket,0,x,y-100);
 
 // update players
 if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
   with(obj_player) {
-    if(player_hangen_value>0) {
-      player_hangen_value-=(other.room_hangen_timer/10)/room_speed;
-      player_hangen_value=min(10,player_hangen_value+max(player_but1+player_but2)/(room_speed));
-      y=(room_height/2)+player_hangen_value;
-    } else {
-      y=min(y+1,room_height*3/4); // drop untill 3/4 of room height.
-      if(player_hangen_score=-1) {
-        image_index=0;
-        player_hangen_score=other.room_hangen_timer;
-        other.room_hangen_counter-=1;
+    if((player_but1+player_but2)>0) {
+      player_werpen_value+=1;
+      player_werpen_var=player_werpen_value;
+      if((player_but1+player_but2)==90 || (player_but1+player_but2)==91) {
+          player_werpen_score+=3;
       }
+      if((player_but1+player_but2)==100 || (player_but1+player_but2)==101 || (player_but1+player_but2)==102) {
+          player_werpen_score-=3;
+      }
+    } else {
+      draw_sprite(spr_ball,0,x,y-(player_werpen_var-player_werpen_value));
+      player_werpen_value-=1;
     }
   }
 }
 
-room_hangen_timer+=1/room_speed; // increment timer
+room_werpen_timer+=1/room_speed; // increment timer
 
 
 // finish conditions
-if((room_hangen_timer>=30 || room_hangen_counter<=0) && !instance_exists(obj_finish)) { // if 30 sec timer or all dropped. (with no finish available)
+if((room_werpen_timer>=30) && !instance_exists(obj_finish)) { // if 30 sec timer or all dropped. (with no finish available)
    instance_create_layer(room_width/2,room_height/2,"Overlay",obj_finish); // finish object; does freeze and roomswitch.
   with(obj_player) { // set score for other players
-      if(player_hangen_score=-1) {
-        player_hangen_score=other.room_hangen_timer;
-      }
+      player_werpen_score=max(0,player_werpen_score);
+      
   }
 }
