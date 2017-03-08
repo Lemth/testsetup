@@ -40,7 +40,7 @@ if((room_balans_timer>=30 || room_balans_counter<=0) && !instance_exists(obj_fin
   with(obj_player) { // set score for other players
       direction=0;
       if(player_balans_score=-1) {
-        player_balans_score=other.room_balans_timer;
+        player_balans_score=other.room_balans_timer*2;
       }
   }
 }
