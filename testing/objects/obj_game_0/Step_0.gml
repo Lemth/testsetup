@@ -31,7 +31,7 @@ if((room_hangen_timer>=30 || room_hangen_counter<=0) && !instance_exists(obj_fin
    instance_create_layer(room_width/2,room_height/2,"Overlay",obj_finish); // finish object; does freeze and roomswitch.
   with(obj_player) { // set score for other players
       if(player_hangen_score=-1) {
-        player_hangen_score=other.room_hangen_timer;
+        player_hangen_score=other.room_hangen_timer*2;
       }
   }
 }
