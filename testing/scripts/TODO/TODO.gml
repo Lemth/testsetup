@@ -39,7 +39,7 @@ CODE:
 a. test menu_main ============ WORKS/DONE
 b. menu_options / menu_about ======== DONE
 c. left/right nav in obj_controls ====== DONE
-d. different games codes (test hangen first) == 4/8
+d. different games codes (test hangen first) == 6/8
 e. end room (with hangen first!) =start
 f. 
 ...
@@ -50,7 +50,7 @@ order; menu buttons, ctndown/finish, menu TEST, hangen TEST -> == HANGEN FIXED
 
 new order: 
 code menu options & about ]]] =====DONE
-code all game modes (fix hangen 0 ) ===== 3/8
+code all game modes (fix hangen 0 ) ===== 6/8
 end screen count score.
 
 
@@ -65,8 +65,8 @@ Hinkelen (2 button timing) - DDR!; hoogste score
 ...Annemariakoekoek (2 button periodic mashing) - RUN - freeze - RUN - freeze - …; naar eind
 ...(schuin-achter view)
 
-.Hoepelen (1 button adjusting) - niet te snel, niet te langzaam spammen; finish bereiken
-.(schuin-achter view)
+...Hoepelen (1 button adjusting) - niet te snel, niet te langzaam spammen; finish bereiken
+...(schuin-achter view)
 
 Bal-in-hoepel-werpen (1 button hold for power, release to throw)
 (schuin-achter-view)
