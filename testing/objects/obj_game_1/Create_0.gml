@@ -15,3 +15,6 @@ room_koekoek_timer=0; // max time clock
 room_koekoek_counter=4; // players done.
 
 instance_create_layer(room_width/2,room_height/2,"Overlay",obj_countdown); // countdown object; don't decrease if countdown is there!
+
+//
+alarm[0]=(3+irandom_range(3,6))*room_speed;
