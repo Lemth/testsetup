@@ -1,7 +1,7 @@
 /// @desc step springen 
 //step
 
-var sinus=48+48*sin((room_springen_step/10)*clamp(2*(2+sin(room_springen_timer)),1.1,1.9));
+sinus=48+48*sin((room_springen_step/10)*clamp(2*(2+sin(room_springen_timer)),1.1,1.9));
 
 // update players
 if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
