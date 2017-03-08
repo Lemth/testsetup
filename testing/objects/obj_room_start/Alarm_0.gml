@@ -3,6 +3,6 @@
 
 with(instance_create_layer(room_width/2,room_height/2,"Instances",obj_countdown)) {
 
-	goto=room_game_0;
+	instance_create_layer(room_width/2,room_height/2,"Instances",obj_finish)
 
 }
