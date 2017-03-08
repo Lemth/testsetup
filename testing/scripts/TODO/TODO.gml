@@ -55,3 +55,33 @@ end screen count score.
 
 
 */
+/*
+
+10-minute-playground-break
+
+Hinkelen (2 button timing) - DDR!; hoogste score
+(schuin-achter view)
+
+Annemariakoekoek (2 button periodic mashing) - RUN - freeze - RUN - freeze - …; naar eind
+(schuin-achter view)
+
+Hoepelen (1 button adjusting) - niet te snel, niet te langzaam spammen; finish bereiken
+(schuin-achter view)
+
+Bal-in-hoepel-werpen (1 button hold for power, release to throw)
+(schuin-achter-view)
+
+Touwtje springen (1 button timing) - RRR touwtje springen ; hoogste score
+(front view)
+
+Aan rek hangen (1 button mashing) - langste volhouden
+(front view)
+
+Balanceren (2 button adjustments) - op balk / bal / touw balanceren
+(front view)
+
+Schommelen (2 buttons alternating) - op juiste moment juiste knop spammen (OF JUIST NIET SPAM, MAAR HOLD!); hoogste komen
+(side view??) - front view op verende pinguin wellicht! / hoepelen.
+
+
+*/
