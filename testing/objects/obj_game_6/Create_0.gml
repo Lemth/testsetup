@@ -3,8 +3,9 @@
 // setup.
 with(obj_player) {
   y=room_height/2;
-  player_hinkel_value=10;
+  player_hinkel_value=0;
   player_hinkel_score=-1;
+  player_hinkel_speed=0;
   image_index=2;
 }
 
