@@ -8,6 +8,7 @@ with(obj_player) {
   image_index=2;
 }
 
+room_koekoek_state=1; // 1 == true == run!
 room_koekoek_timer=0; // max time clock
 room_koekoek_counter=4; // players done.
 
