@@ -5,6 +5,8 @@ with(obj_player) {
   y=room_height*4/5;
   player_koekoek_value=0;
   player_koekoek_score=-1;
+  player_koekoek_speed=0;
+  player_koekoek_press=-1;
   image_index=2;
 }
 
