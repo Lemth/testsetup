@@ -46,7 +46,7 @@ f.
 x. add random keys (hold 3 sec) ===== scrapped
 
 
-order; menu buttons, ctndown/finish, menu TEST, hangen TEST -> 
+order; menu buttons, ctndown/finish, menu TEST, hangen TEST -> == HANGEN FIXED
 
 new order: 
 code menu options & about
