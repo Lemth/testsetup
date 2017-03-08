@@ -28,20 +28,22 @@ for(var i=0; i<menu_length; i++) {
       if(enter==1) { // if pressed enter (or did the mb click!)
           switch(menu_pos) {
              case 0: 
-					with(obj_controls) {
-		                  if(mouse_check_button_pressed(mb_left)) {
-		                     set_first_player="mouse";  // 10 step delay for adding mouse to player
-		                  } else {
-		                     set_first_player="keyboard";   // 10 step delay for adding keyboard to player
-		                  }
-				  }
-                  room_goto(room_start); // start the game
+		// FULLSCREEN HERE
+			  
+			  
                break;
              case 1:
-                  room_goto(room_options); // goto options
+                  // RESOLUTION HERE
+			  
+			  
                break;
              case 2:
-                  game_end(); // end game. :'(
+                  // VOLUME HERE
+			  
+			  
+               break;
+		case 2:
+                  room_goto(room_menu); // end game. :'(
                break;
              default: break;
           }
