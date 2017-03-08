@@ -37,9 +37,9 @@ SOUND
 
 CODE:
 a. test menu_main ============ WORKS
-b. menu_options / menu_about
+b. menu_options / menu_about ======== DONE
 c. left/right nav in obj_controls ====== DONE
-d. different games codes (test hangen first)
+d. different games codes (test hangen first) == 3/8
 e. end room (with hangen first!) =start
 f. 
 ...
@@ -49,8 +49,8 @@ x. add random keys (hold 3 sec) ===== scrapped
 order; menu buttons, ctndown/finish, menu TEST, hangen TEST -> == HANGEN FIXED
 
 new order: 
-code menu options & about
-code all game modes (fix hangen 0 )
+code menu options & about ]]] =====DONE
+code all game modes (fix hangen 0 ) ===== 3/8
 end screen count score.
 
 
@@ -62,8 +62,8 @@ end screen count score.
 Hinkelen (2 button timing) - DDR!; hoogste score
 (schuin-achter view)
 
-Annemariakoekoek (2 button periodic mashing) - RUN - freeze - RUN - freeze - …; naar eind
-(schuin-achter view)
+...Annemariakoekoek (2 button periodic mashing) - RUN - freeze - RUN - freeze - …; naar eind
+...(schuin-achter view)
 
 Hoepelen (1 button adjusting) - niet te snel, niet te langzaam spammen; finish bereiken
 (schuin-achter view)
@@ -74,11 +74,11 @@ Bal-in-hoepel-werpen (1 button hold for power, release to throw)
 Touwtje springen (1 button timing) - RRR touwtje springen ; hoogste score
 (front view)
 
-Aan rek hangen (1 button mashing) - langste volhouden
-(front view)
+...Aan rek hangen (1 button mashing) - langste volhouden
+...(front view)
 
-Balanceren (2 button adjustments) - op balk / bal / touw balanceren
-(front view)
+...Balanceren (2 button adjustments) - op balk / bal / touw balanceren
+...(front view)
 
 Schommelen (2 buttons alternating) - op juiste moment juiste knop spammen (OF JUIST NIET SPAM, MAAR HOLD!); hoogste komen
 (side view??) - front view op verende pinguin wellicht! / hoepelen.
