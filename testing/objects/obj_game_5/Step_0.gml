@@ -1,34 +1,34 @@
+/// @desc drawwp hoepel 
+//draw
+
+with(obj_player) {
+  if(alarm[hoepel]<=0) {
+    draw_sprite(spr_hoepel,choose(0,0,0,1,0,0,0,2), x,y-32);
+  } else {
+    draw_spite(spr_hoepel,3,x,y-32); 
+  }
+} // move player draw to draw end!!!!!!!!!!
+
 /// @desc step hoepel 
 //step
-
-
 // update players
 if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
   with(obj_player) {
-    if(player_hoepel_value<100 && image_index!=0) { // play condition
-      if(player_but1==1) {
-        if(player_hoepel_press!=1 && other.room_hoepel_state==1) {
-          player_hoepel_speed+=1; 
-        } else { player_hoepel_speed-=1; } // wrong keypress!!
-        player_hoepel_press=1;
-        image_index=7; // left foot down
-      }
-      if(player_but2==1) {
-        if(player_hoepel_press!=2 && other.room_hoepel_state==1) {
-          player_hoepel_speed+=1; 
-        } else { player_hoepel_speed-=1; } // wrong keypress!!
-        player_hoepel_press=2;
-        image_index=8; // right foot down foot down
+    if(player_hoepel_value<100) { // play condition
+      if((player_but1==1 || player_but2==1) && alarm[hoepel]<=0) {
+        player_hoepel_speed=min(5,player_hoepel_speed+.5);
+        if(image_index=7) {
+          image_index=8; // right foot down foot down
+        } else { image_index=7; } // left foot down down down down 
       }
       
-      if(other.room_hoepel_state==-1 && player_hoepel_speed<=-1 && (player_but1>10 || player_but2>10)) {
-        player_hoepel_score=player_hoepel_value;
-        image_index=0; // this is how they stop competing when wrong pressing!
+      player_hoepel_speed-=1/room_speed;
+      
+      if(player_hoepel_speed>4) {
+        // too fast!
+        alarm[hoepel]=room_speed;
+        player_hoepel_speed=0;
       }
-      
-      player_hoepel_speed=clamp(player_hoepel_speed-(5/room_speed),0,5); // clamp min max speed.
-      
-      
       
       player_hoepel_value+=player_hoepel_speed; // update value
       
