@@ -1,3 +1,11 @@
+/// @desc draw springen 
+//draw event
+
+ with(obj_player) {
+    draw_sprite(spr_springrope,round(other.sinus/8),x,y); // 12 frames approx. center middlebot
+ }
+
+
 /// @desc step springen 
 //step
 
@@ -7,8 +15,9 @@ sinus=48+48*sin((room_springen_step/10)*clamp(2*(2+sin(room_springen_timer)),1.1
 if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
   with(obj_player) {
     if(player_springen_value>0) { //(can't jump)
-      player_springen_value-=(other.room_springen_timer/10)/room_speed;
-      player_springen_value=min(10,player_springen_value+max(player_but1+player_but2)/(room_speed));
+      
+      //this is movebow
+      player_springen_value=((64*alarm[movebow])/15)-((32*(alarm[movebow]*alarm[movebow]))/225); 
       
     } else { // CAN jump!
       if(player_but1==1 || player_but2==1) { 
