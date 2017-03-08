@@ -40,7 +40,10 @@ for(var i=0; i<menu_length; i++) {
              case 1:
                   room_goto(room_options); // goto options
                break;
-             case 2:
+		case 2:
+                  room_goto(room_about); // goto about
+               break;
+             case 3:
                   game_end(); // end game. :'(
                break;
              default: break;
