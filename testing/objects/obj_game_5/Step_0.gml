@@ -51,7 +51,7 @@ if((room_hoepel_timer>=30 || room_hoepel_counter<=0) && !instance_exists(obj_fin
    instance_create_layer(room_width/2,room_height/2,"Overlay",obj_finish); // finish object; does freeze and roomswitch.
   with(obj_player) { // set score for other players
       if(player_hoepel_score=-1) {
-        player_hoepel_score=player_koekoek_value;
+        player_hoepel_score=player_hoepel_value;
       }
   }
 }
