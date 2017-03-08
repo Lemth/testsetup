@@ -15,7 +15,7 @@ room_menu (start | options (fs,reso,sound,about) | exit) === DONE
 	______ (if all works well)
 3. make room_game0 ... room_game7  ===== W.I.P.
 	a. add scenery ===== W.I.P.
-	b. add objects that control scenery
+	b. add objects that control scenery ==== W.I.P ?
 	c. write player game state ===== DONE
 	
 4. make room_end with score in candy / no number or actual winner
@@ -39,7 +39,7 @@ CODE:
 a. test menu_main ============ WORKS/DONE
 b. menu_options / menu_about ======== DONE
 c. left/right nav in obj_controls ====== DONE
-d. different games codes (test hangen first) == 6/8
+d. different games codes (test hangen first) == 7/8
 e. end room (with hangen first!) =start
 f. 
 ...
@@ -50,7 +50,7 @@ order; menu buttons, ctndown/finish, menu TEST, hangen TEST -> == HANGEN FIXED
 
 new order: 
 code menu options & about ]]] =====DONE
-code all game modes (fix hangen 0 ) ===== 6/8
+code all game modes (fix hangen 0 ) ===== 7/8
 end screen count score.
 
 
@@ -59,8 +59,8 @@ end screen count score.
 
 10-minute-playground-break
 
-Hinkelen (2 button timing) - DDR!; hoogste score
-(schuin-achter view)
+...Hinkelen (2 button timing) - DDR!; hoogste score
+...(schuin-achter view)
 
 ...Annemariakoekoek (2 button periodic mashing) - RUN - freeze - RUN - freeze - …; naar eind
 ...(schuin-achter view)
