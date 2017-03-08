@@ -29,17 +29,32 @@ for(var i=0; i<menu_length; i++) {
           switch(menu_pos) {
              case 0: 
 		// FULLSCREEN HERE
-			  
+			if(global.fullscreen==0) {
+							global.fullscreen=1;
+						} else {
+							global.fullscreen=0;
+						}  
 			  
                break;
              case 1:
                   // RESOLUTION HERE
-			  
+			  if (global.resolution_height==display_get_height() ) {
+							global.resolution_height=360;	
+						}		
+						global.resolution_height=((global.resolution_height/180)+1)*180;
+						if(global.resolution_height>2160) {
+							global.resolution_height=360;
+						} else if (global.resolution_height>display_get_height() ) {
+							global.resolution_height=display_get_height();	
+						}
 			  
                break;
              case 2:
                   // VOLUME HERE
-			  
+			  global.volume+=0.1;
+						if(global.volume>1) {
+							global.volume=0;
+						}
 			  
                break;
 		case 2:
@@ -47,6 +62,14 @@ for(var i=0; i<menu_length; i++) {
                break;
              default: break;
           }
+	      ini_open("m.ini");
+						ini_write_real("Settings","Fullscreen",global.fullscreen);
+						ini_write_real("Settings","Resolution",global.resolution_height);
+					
+						ini_write_real("Settings","Volume",global.volume);
+					
+						ini_close();
+						game_restart();
       }
 	  
 	  
