@@ -1,34 +1,47 @@
-/// @desc step hange 
+/// @desc step wippen 
 //step
 
 
 // update players
 if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
   with(obj_player) {
-    if(player_hangen_value>0) {
-      player_hangen_value-=(other.room_hangen_timer/10)/room_speed;
-      player_hangen_value=min(10,player_hangen_value+max(player_but1+player_but2)/(room_speed));
-      y=(room_height/2)+player_hangen_value;
+    if(player_wippen_value>0 && player_wippen_value<180) {
+      
+      if(player_wippen_value>90) {
+        player_wippen_value-=(player_wippen_value-90)*(30-other.room_wippen_timer)/room_speed; // value good?
+      } else if (player_wippen_value<90) {
+        player_wippen_value+=(90-player_wippen_value)*(30-other.room_wippen_timer)/room_speed; // value good?
+      }
+      
+      if(player_but1>=1) {
+        player_wippen_value+=1; // value good?
+      } 
+      if(player_but2>=1) {
+        player_wippen_value-=1; // value good?
+      } 
+      
+      direction=player_wippen_value-90;
     } else {
-      y=min(y+1,room_height*3/4); // drop untill 3/4 of room height.
-      if(player_hangen_score=-1) {
-        image_index=0;
-        player_hangen_score=other.room_hangen_timer;
-        other.room_hangen_counter-=1;
+      direction=(direction+90)/2;
+      if(player_wippen_score=-1) {
+        player_wippen_score=(30-other.room_wippen_timer)+90;
+        other.room_wippen_counter-=1;
       }
     }
   }
 }
 
-room_hangen_timer+=1/room_speed; // increment timer
+room_wippen_timer+=1/room_speed; // increment timer
 
 
 // finish conditions
-if((room_hangen_timer>=30 || room_hangen_counter<=0) && !instance_exists(obj_finish)) { // if 30 sec timer or all dropped. (with no finish available)
+if((room_wippen_timer>=30 || room_wippen_counter<=0) && !instance_exists(obj_finish)) { // if 30 sec timer or all dropped. (with no finish available)
    instance_create_layer(room_width/2,room_height/2,"Overlay",obj_finish); // finish object; does freeze and roomswitch.
   with(obj_player) { // set score for other players
-      if(player_hangen_score=-1) {
-        player_hangen_score=other.room_hangen_timer;
+      direction=0;
+      image_index=0; // ?
+      if(player_wippen_score=-1) {
+        player_wippen_score=abs(player_wippen_value-90);
       }
   }
 }
