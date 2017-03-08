@@ -30,7 +30,7 @@ if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
       
       
       
-      player_hangen_value+=player_koekoek_speed; // update value
+      player_koekoek_value+=player_koekoek_speed; // update value
       
       y=(room_height*4/5)-player_koekoek_value; // update position visually
     } else { // win condition
