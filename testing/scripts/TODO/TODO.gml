@@ -1,22 +1,22 @@
 // TO DO : 
 /*
 
-room_menu (start | options (fs,reso,sound,about) | exit)
+room_menu (start | options (fs,reso,sound,about) | exit) === DONE
             ||
 	room_start (allow players to select char for +-10 seconds) [players objects here and persistent! - one obj_game remembers which rooms are in play and keeps them in order, also prevents double rooms]
 	    ||
-      8x room_random! [ based on obj_game - also deals out new player states]
+      8x room_random! [ based on obj_game - also deals out new player states] ===== DONE
 	    ||
 	 room_end (see player score based on candy and go back to main menu in +-10 seconds)
 	 
 	 
-1. make main menu / room_options / room_about [almost]
-2. make room_start with player selection (check!)
+1. make main menu / room_options / room_about [almost] ====== DONE
+2. make room_start with player selection (check!) ===== DONE
 	______ (if all works well)
-3. make room_game0 ... room_game7 
-	a. add scenery
+3. make room_game0 ... room_game7  ===== W.I.P.
+	a. add scenery ===== W.I.P.
 	b. add objects that control scenery
-	c. write player game state
+	c. write player game state ===== DONE
 	
 4. make room_end with score in candy / no number or actual winner
 
@@ -36,7 +36,7 @@ SOUND
 - bell for start and level change
 
 CODE:
-a. test menu_main ============ WORKS
+a. test menu_main ============ WORKS/DONE
 b. menu_options / menu_about ======== DONE
 c. left/right nav in obj_controls ====== DONE
 d. different games codes (test hangen first) == 3/8
