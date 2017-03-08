@@ -1,5 +1,6 @@
 /// @description Initialize game
 
+randomize();
 show_debug_overlay(true);
 
 draw_set_valign(fa_middle);

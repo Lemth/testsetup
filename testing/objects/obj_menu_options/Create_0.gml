@@ -4,9 +4,9 @@
 event_inherited();
 
 //room_goto(room_start);
-menu_array[0]=spr_fullscreen; // 
-menu_array[1]=spr_resolution; // 
-menu_array[2]=spr_volumeknob; // 
+menu_array[0]=spr_empty; // 
+menu_array[1]=spr_empty; // 
+menu_array[2]=spr_empty; // 
 menu_array[3]=spr_playbutton; // back to main menu
 
 menu_pos=0;

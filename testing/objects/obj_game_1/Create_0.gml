@@ -7,7 +7,7 @@ with(obj_player) {
   player_koekoek_score=-1;
   player_koekoek_speed=0;
   player_koekoek_press=-1;
-  image_index=2;
+  image_index=5;
 }
 
 room_koekoek_state=1; // 1 == true == run!

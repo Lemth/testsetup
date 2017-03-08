@@ -1,10 +1,11 @@
 /// @description room_werpen
 // setup.
 with(obj_player) {
-  y=room_height/2;
+  y=room_height*4/5;
   player_werpen_value=0;
   player_werpen_score=-1;
-  image_index=2;
+  player_werpen_var=0;
+  image_index=10;
 }
 
 room_werpen_timer=0;

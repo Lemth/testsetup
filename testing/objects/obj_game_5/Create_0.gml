@@ -2,11 +2,11 @@
 
 // setup.
 with(obj_player) {
-  y=room_height/2;
+  y=room_height*4/5;
   player_hoepel_value=0;
   player_hoepel_score=-1;
   player_hoepel_speed=0;
-  image_index=2;
+  image_index=10;
 }
 
 room_hoepel_timer=0;

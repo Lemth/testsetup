@@ -1,4 +1,26 @@
 // TO DO : 
+
+
+/*
+
+
+create AI to make game feel more alive;
+score WORKS!! now fill screen with candy stuff
+get sounds and find cool additional graphic stuff.
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
 /*
 
 room_menu (start | options (fs,reso,sound,about) | exit) === DONE

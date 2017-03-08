@@ -5,7 +5,7 @@ with(obj_player) {
   y=room_height/2;
   player_wippen_value=90;
   player_wippen_score=-1;
-  image_index=2;
+  image_index=4;
 }
 
 room_wippen_timer=0;

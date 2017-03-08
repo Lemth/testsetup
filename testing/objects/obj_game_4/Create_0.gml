@@ -5,7 +5,7 @@ with(obj_player) {
   y=room_height/2;
   player_springen_value=0;
   player_springen_score=-1;
-  image_index=2;
+  image_index=0;
 }
 
 room_springen_step=0;

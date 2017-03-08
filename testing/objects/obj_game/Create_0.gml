@@ -15,7 +15,7 @@ for(i=0;i<array_length_1d(room_array);i++) {
   do {
     already_exists=false;
     room_order[i]=irandom(7);
-    for(j=0;j<array_length_1d(room_order);i++) {
+    for(j=0;j<array_length_1d(room_order);j++) {
        if(i!=j && room_order[i]==room_order[j]) {
           already_exists=true;
        }

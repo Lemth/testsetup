@@ -57,7 +57,7 @@ for(var i=0; i<menu_length; i++) {
 						}
 			  
                break;
-		case 2:
+		case 3:
                   room_goto(room_menu); // end game. :'(
                break;
              default: break;

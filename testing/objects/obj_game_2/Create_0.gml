@@ -5,7 +5,7 @@ with(obj_player) {
   y=room_height/2;
   player_balans_value=90;
   player_balans_score=-1;
-  image_index=4;
+  image_index=3;
 }
 
 room_balans_timer=0;

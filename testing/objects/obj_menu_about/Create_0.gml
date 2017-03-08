@@ -4,9 +4,9 @@
 event_inherited();
 
 //room_goto(room_start);
-menu_array[0]=spr_about1; // 
-menu_array[1]=spr_about2; // 
-menu_array[2]=spr_about3; // 
+menu_array[0]=spr_empty; // 
+menu_array[1]=spr_empty; // 
+menu_array[2]=spr_empty; // 
 menu_array[3]=spr_playbutton; // main menu
 
 menu_pos=0;
