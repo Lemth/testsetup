@@ -39,7 +39,7 @@ CODE:
 a. test menu_main ============ WORKS/DONE
 b. menu_options / menu_about ======== DONE
 c. left/right nav in obj_controls ====== DONE
-d. different games codes (test hangen first) == 3/8
+d. different games codes (test hangen first) == 4/8
 e. end room (with hangen first!) =start
 f. 
 ...
@@ -71,8 +71,8 @@ Hoepelen (1 button adjusting) - niet te snel, niet te langzaam spammen; finish b
 Bal-in-hoepel-werpen (1 button hold for power, release to throw)
 (schuin-achter-view)
 
-Touwtje springen (1 button timing) - RRR touwtje springen ; hoogste score
-(front view)
+.Touwtje springen (1 button timing) - RRR touwtje springen ; hoogste score
+.(front view)
 
 ...Aan rek hangen (1 button mashing) - langste volhouden
 ...(front view)
@@ -80,8 +80,8 @@ Touwtje springen (1 button timing) - RRR touwtje springen ; hoogste score
 ...Balanceren (2 button adjustments) - op balk / bal / touw balanceren
 ...(front view)
 
-Schommelen (2 buttons alternating) - op juiste moment juiste knop spammen (OF JUIST NIET SPAM, MAAR HOLD!); hoogste komen
-(side view??) - front view op verende pinguin wellicht! / hoepelen.
+...Schommelen (2 buttons alternating) - op juiste moment juiste knop spammen (OF JUIST NIET SPAM, MAAR HOLD!); hoogste komen
+...(side view??) - front view op verende pinguin wellicht! / hoepelen.
 
 
 */
