@@ -2,12 +2,14 @@
 
 if(keyboard_check(button1)) {
 	player_but1+=1;
+	alarm[0]=room_speed*12;
 } else {
 	player_but1=0;
 }
 
 if(keyboard_check(button2)) {
 	player_but2+=1;
+	alarm[0]=room_speed*12;
 } else {
 	player_but2=0;
 }
