@@ -4,7 +4,8 @@
 /*
 
 
-create AI to make game feel more alive;
+create AI to make game feel more alive; ====== DONE
+(also return to AI after inactivity) ===== DONE
 score WORKS!! now fill screen with candy stuff
 get sounds and find cool additional graphic stuff.
 
