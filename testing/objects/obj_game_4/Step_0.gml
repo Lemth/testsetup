@@ -15,9 +15,13 @@ if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
       image_index=1;
 	  
     } else { // CAN jump!
+	     if(keyset==-1 && random(room_speed)<=1) { player_but1=1; }
+	    if(keyset==-1 && random(room_speed)<=1) { player_but2=1; }
       if(player_but1==1 || player_but2==1) { 
         alarm[2]=room_speed; // alarm[0] on player for move bow
       }
+	    player_but1=0;
+	    player_but2=0;
       player_springen_score+=1;
 	  image_index=0;
     }
