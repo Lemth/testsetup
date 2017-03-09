@@ -12,13 +12,25 @@ if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
       } else if (player_balans_value<90) {
         player_balans_value-=(90-player_balans_value)*other.room_balans_timer/(room_speed*5); // value good?
       }
-      
+      if(keyset==-1 && random(room_speed/10)<=1) {
+          switch(choose(0,1)) {
+            case 0:
+              player_but1=1;
+              break;
+            case 1:
+              player_but2=1;
+              break;
+            case default:
+              break;
+          }
+      }
       if(player_but1==1) {
         player_balans_value+=1; // value good?
       } 
       if(player_but2==1) {
         player_balans_value-=1; // value good?
-      } 
+      }
+	if(keyset==-1) { player_but1=0; player_but2=0; }
       player_balans_value+=random_range(-.1,.1);
       direction=player_balans_value-90;
     } else {
