@@ -10,6 +10,7 @@ if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
 	  var but=0;
 	  if(player_but1==1) { but=1; }
 	  if(player_but2==1) { but=1; }
+	    if(keyset==-1 && random(room_speed)<=1) { but=1; }
       player_hangen_value=min(10,player_hangen_value+(but/(room_speed)));
       y=(room_height/2)+(10-player_hangen_value);
     } else {
