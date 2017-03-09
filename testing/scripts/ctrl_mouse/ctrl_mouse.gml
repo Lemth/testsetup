@@ -2,12 +2,14 @@
 
 if(mouse_check_button(mb_left)) {
 	player_but1+=1;
+	alarm[0]=room_speed*12;
 } else {
 	player_but1=0;
 }
 
 if(mouse_check_button(mb_right)) {
 	player_but2+=1;
+	alarm[0]=room_speed*12;
 } else {
 	player_but2=0;
 }
