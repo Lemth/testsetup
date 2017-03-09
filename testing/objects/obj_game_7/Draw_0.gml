@@ -6,6 +6,8 @@
 if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
   with(obj_player) {
   draw_sprite(spr_basket,0,x,room_height*4/5-95*2);
+	  if(keyset==-1 && random(room_speed)<=1) { player_but1=95/2; }
+	  if(keyset==-1 && random(room_speed)<=1) { player_but1=95/2; }
     if((player_but1+player_but2)>0) {
 		image_index=10;
       player_werpen_value+=1;
@@ -21,6 +23,7 @@ if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
       draw_sprite(spr_ball,0,x,y-((player_werpen_var-player_werpen_value)*2));
       player_werpen_value-=1;
     }
+	  if(keyset==-1) {player_but1=0; player_but2=0; }
   }
 }
 
