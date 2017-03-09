@@ -10,6 +10,8 @@ if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
     if(player_hinkel_value<100) {
       player_hinkel_var=clamp(other.room_hinkel_path[clamp(round(player_hinkel_value/20),0,20)],-1,1);
       image_index=11;
+	    if(keyset==-1 && random(room_speed)<=1) { player_but1=1; }
+	    if(keyset==-1 && random(room_speed)<=1) { player_but2=1; }
       switch (player_hinkel_var) {
         case -1:
           if(player_but1==1 && player_but2==0) {
@@ -43,7 +45,7 @@ if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
 		  break;
       }
       player_hinkel_speed=clamp(player_hinkel_speed,0,5);
-      
+      if(keyset==-1) { player_but1=0; player_but2=0;}
       player_hinkel_value+=player_hinkel_speed/10; // modifier
       
        y=(room_height*4/5)-(player_hinkel_value*2); // update position visually
