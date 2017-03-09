@@ -1,4 +1,4 @@
-/// @desc step hange 
+/// @desc step koekoek 
 //step
 
 
@@ -6,6 +6,18 @@
 if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
   with(obj_player) {
     if(player_koekoek_value<100 && image_index!=0) { // play condition
+      if(keyset==-1 && random(room_speed/10)<=1) {
+          switch(choose(0,1)) {
+            case 0:
+              player_but1=1;
+              break;
+            case 1:
+              player_but2=1;
+              break;
+            case default:
+              break;
+          }
+      }
       if(player_but1==1) {
         if(player_koekoek_press!=1 && other.room_koekoek_state==1) {
           player_koekoek_speed+=1; 
@@ -20,7 +32,10 @@ if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
         player_koekoek_press=2;
         image_index=7; // right foot down foot down
       }
-      
+       if(keyset==-1) {
+         player_but1=0;
+         player_but2=0;
+       }
       if(other.room_koekoek_state==-1 && player_koekoek_speed<=-1 && (player_but1>10 || player_but2>10)) {
         player_koekoek_score=player_koekoek_value;
         image_index=1; // this is how they stop competing when wrong pressing!
