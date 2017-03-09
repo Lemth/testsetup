@@ -6,6 +6,8 @@
 if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
   with(obj_player) {
     if(player_hoepel_value<100) { // play condition
+	    if(keyset==-1 && random(room_speed)<=1) { player_but1=1; }
+	    if(keyset==-1 && random(room_speed)<=1) { player_but2=1; }
       if((player_but1==1 || player_but2==1) && alarm[1]<=0) {
         player_hoepel_speed=min(5,player_hoepel_speed+.5);
         if(image_index=6) {
@@ -20,6 +22,10 @@ if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
         alarm[1]=room_speed;
         player_hoepel_speed=0;
       }
+	    if(keyset==-1) {
+	    player_but1=0;
+	    player_but2=0;
+	    }
       player_hoepel_speed=clamp(player_hoepel_speed,0,5);
       player_hoepel_value+=player_hoepel_speed/4; // update value
       
