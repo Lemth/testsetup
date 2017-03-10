@@ -1,5 +1,7 @@
 /// @description room_koekoek!
 
+google_analytics_screenview("Game_1");
+
 // setup.
 with(obj_player) {
   y=room_height*4/5;
