@@ -15,9 +15,15 @@ with(obj_player) {
 	google_analytics_event("Playstats", "Score",player_score,string(id));
 }
 
+count=0;
+
 with(obj_controls) {
 	for(i=0;i<10;i++) {
 		google_analytics_event("Playstats", "Controls", ctrl_lease[i], string(i)]);
-
+		if(ctrl_lease[i]==true) {
+			other.count+=1;	
+		}
 	}
 }
+
+google_analytics_event("Playstats", "Players", count, "PlayerCount");
