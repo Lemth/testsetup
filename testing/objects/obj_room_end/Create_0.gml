@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 google_analytics_screenview("Game_end");
-google_analytics_time_end("Playtime", "Total_Playtime");
+google_analytics_time_stop("Playtime", "Total_Playtime");
 google_analytics_event("Playtime", "Reached_End");
 
 maxscore=0;
@@ -22,7 +22,7 @@ count=0;
 
 with(obj_controls) {
 	for(i=0;i<10;i++) {
-		google_analytics_event("Playstats", "Controls", string(ctrl_lease[i]), string(i)]);
+		google_analytics_event("Playstats", "Controls", string(ctrl_lease[i]), string(i));
 		if(ctrl_lease[i]==true) {
 			other.count+=1;	
 		}

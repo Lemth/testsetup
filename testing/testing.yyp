@@ -655,6 +655,14 @@
             }
         },
         {
+            "Key": "ce9b6987-10e0-47a2-ac8d-57f7dc06f610",
+            "Value": {
+                "id": "39a4f9fc-d1cb-463b-a25e-efd27d23a9a6",
+                "resourcePath": "scripts\\device_get_id\\device_get_id.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d1adb3ff-c928-4208-8904-8c7fa2889b19",
             "Value": {
                 "id": "04aa312a-9a51-44eb-9ec5-fb97c7e4689d",
@@ -759,10 +767,26 @@
             }
         },
         {
+            "Key": "f4f0bc9c-fdbd-4e8c-be07-278c6b199e8e",
+            "Value": {
+                "id": "e3a90863-3393-4e28-8436-963c6c933654",
+                "resourcePath": "extensions\\GoogleAnalytics\\GoogleAnalytics.yy",
+                "resourceType": "GMExtension"
+            }
+        },
+        {
             "Key": "f6d13cbe-825c-48d1-a240-b912522d2869",
             "Value": {
                 "id": "176c66d7-e578-4e80-b89a-1a20db7dc53e",
                 "resourcePath": "scripts\\ctrl_gamepad\\ctrl_gamepad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f73f23c4-2aaf-4449-9e02-587755b3ec37",
+            "Value": {
+                "id": "c3977a86-fe38-4e8c-bcba-fc3086eb4a2c",
+                "resourcePath": "scripts\\random_string\\random_string.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -797,7 +821,9 @@
         "19f9c3be-d1fe-4556-92f9-c86dc3bcad05",
         "1c012497-2edf-4ffb-96fe-c397ce240047",
         "891f07b6-b832-4fbf-8f20-94c88a6e94b3",
-        "f6d13cbe-825c-48d1-a240-b912522d2869"
+        "f6d13cbe-825c-48d1-a240-b912522d2869",
+        "ce9b6987-10e0-47a2-ac8d-57f7dc06f610",
+        "f73f23c4-2aaf-4449-9e02-587755b3ec37"
     ],
     "tutorial": ""
 }
