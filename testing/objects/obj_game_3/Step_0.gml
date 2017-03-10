@@ -8,9 +8,9 @@ if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
     if(player_wippen_value>0 && player_wippen_value<180) {
       
       if(player_wippen_value>90) {
-        player_wippen_value-=(player_wippen_value-90)*(30-other.room_wippen_timer)/room_speed; // value good?
+        player_wippen_value-=(player_wippen_value-90)*(15-other.room_wippen_timer)/room_speed; // value good?
       } else if (player_wippen_value<90) {
-        player_wippen_value+=(90-player_wippen_value)*(30-other.room_wippen_timer)/room_speed; // value good?
+        player_wippen_value+=(90-player_wippen_value)*(15-other.room_wippen_timer)/room_speed; // value good?
       }
       if(keyset==-1 && random(room_speed/10)<=1) {
           switch(choose(0,1)) {
