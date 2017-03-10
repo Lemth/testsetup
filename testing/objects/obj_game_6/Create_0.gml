@@ -1,5 +1,7 @@
 /// @description room_hinkel
 
+google_analytics_screenview("Game_6");
+
 // setup.
 with(obj_player) {
   y=room_height*4/5;
