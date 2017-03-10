@@ -3,6 +3,8 @@
 
 event_inherited();
 
+google_analytics_screenview("Menu_options");
+
 //room_goto(room_start);
 menu_array[0]=spr_empty; // 
 menu_array[1]=spr_empty; // 
