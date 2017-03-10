@@ -6,8 +6,8 @@
 if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
   with(obj_player) {
   draw_sprite(spr_basket,0,x,room_height*4/5-95*2);
-	  if(keyset==-1 && random(room_speed)<=1) { player_but1=95/2; }
-	  if(keyset==-1 && random(room_speed)<=1) { player_but1=95/2; }
+	  if(keyset==-1 && random(room_speed*10)<=1) { player_but1=95; }
+	  if(keyset==-1 && random(room_speed*10)<=1) { player_but1=95; }
     if((player_but1+player_but2)>0) {
 		image_index=10;
       player_werpen_value+=1;
