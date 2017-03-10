@@ -26,7 +26,7 @@ if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
           if(player_but1>=1 && player_but2>=1) {
 		  image_index=10;
             player_hinkel_speed+=1;
-          } else if (player_but2>=30 || player_but1>=30) {
+          } else if (player_but2>=60 || player_but1>=60) {
 		  image_index=choose(8,9);
             player_hinkel_speed-=1;
           }
@@ -44,7 +44,7 @@ if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
 			image_index=11;
 		  break;
       }
-      player_hinkel_speed=clamp(player_hinkel_speed,0,5);
+      player_hinkel_speed=clamp(player_hinkel_speed-(1/room_speed),0,5);
       if(keyset==-1) { player_but1=0; player_but2=0;}
       player_hinkel_value+=player_hinkel_speed/10; // modifier
       
