@@ -1,4 +1,7 @@
 /// @description room_werpen
+
+google_analytics_screenview("Game_7");
+
 // setup.
 with(obj_player) {
   y=room_height*4/5;
