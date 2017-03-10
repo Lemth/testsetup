@@ -20,7 +20,8 @@ if(!instance_exists(obj_countdown) && !instance_exists(obj_finish)) {
             case 1:
               player_but2=1;
               break;
-            case default:
+            default:
+			//
               break;
           }
       }
