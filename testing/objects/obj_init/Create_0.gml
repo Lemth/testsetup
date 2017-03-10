@@ -1,7 +1,12 @@
 /// @description Initialize game
 
 randomize();
-show_debug_overlay(true);
+//show_debug_overlay(true);
+
+///////// GOOGLE
+google_analytics_init("UA-93461824-1", "PlaygroundBreak", "0.9", "com.lemth.playgroundbreak");
+/////////
+
 
 draw_set_valign(fa_middle);
 draw_set_halign(fa_center);
