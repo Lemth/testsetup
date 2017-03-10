@@ -1,5 +1,7 @@
 /// @description room_balans
 
+google_analytics_screenview("Game_2");
+
 // setup.
 with(obj_player) {
   y=room_height/2;
