@@ -12,18 +12,18 @@ with(obj_player) {
 	image_index=0;
 	player_score=player_werpen_score+player_hinkel_score+player_koekoek_score+player_hoepel_score+
 			player_balans_score+player_hangen_score+player_springen_score+player_wippen_score;
-	google_analytics_event("Playstats", "Score",player_score,string(id));
+	google_analytics_event("Playstats", "Score",string(player_score),string(id));
 }
 
 count=0;
 
 with(obj_controls) {
 	for(i=0;i<10;i++) {
-		google_analytics_event("Playstats", "Controls", ctrl_lease[i], string(i)]);
+		google_analytics_event("Playstats", "Controls", string(ctrl_lease[i]), string(i)]);
 		if(ctrl_lease[i]==true) {
 			other.count+=1;	
 		}
 	}
 }
 
-google_analytics_event("Playstats", "Players", count, "PlayerCount");
+google_analytics_event("Playstats", "Players", string(count), "PlayerCount");
