@@ -1,5 +1,7 @@
 /// @description room_springen
 
+google_analytics_screenview("Game_4");
+
 // setup.
 with(obj_player) {
   y=room_height/2;
