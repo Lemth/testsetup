@@ -31,8 +31,11 @@ for(var i=0; i<menu_length; i++) {
 		// FULLSCREEN HERE
 			if(global.fullscreen==0) {
 							global.fullscreen=1;
+				google_analytics_event("Settings", "Fullscreen", global.fullscreen, "fullscreen");
+
 						} else {
 							global.fullscreen=0;
+				google_analytics_event("Settings", "Fullscreen", global.fullscreen, "fullscreen");
 						}  
 			  
                break;
@@ -47,6 +50,7 @@ for(var i=0; i<menu_length; i++) {
 						} else if (global.resolution_height>display_get_height() ) {
 							global.resolution_height=display_get_height();	
 						}
+			  google_analytics_event("Settings", "Resolution", global.resolution_height, "resolution");
 			  
                break;
              case 2:
@@ -55,6 +59,7 @@ for(var i=0; i<menu_length; i++) {
 						if(global.volume>1) {
 							global.volume=0;
 						}
+			  google_analytics_event("Settings", "Volume", global.volume, "volume");
 			  
                break;
 		case 3:
