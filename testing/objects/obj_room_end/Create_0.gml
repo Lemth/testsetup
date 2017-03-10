@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+google_analytics_screenview("Game_end");
+
 alarm[0]=6*room_speed;
 with(obj_player) {
 	y=room_height/2;
