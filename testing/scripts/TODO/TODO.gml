@@ -4,9 +4,35 @@
 /*
 
 
+added some vis; requered vis:
+
+ABOUT: KEYS / MOUSE+GP / RESISTJAM
+OPTIONS: textprint inside buttons
+ROOM END: confetti to OBJ_confetti
+games: show controls
+HANGEN: draw line on player?
+KOEKOEK: HALT symbol
+ROOM START: show keyboard / mouse+gp
+
+
+
+finally; all sounds
+
+
+
+
+
+
+
+
+
+
+
+
+
 create AI to make game feel more alive; ====== DONE
 (also return to AI after inactivity) ===== DONE
-score WORKS!! now fill screen with candy stuff
+score WORKS!! now fill screen with candy stuff======?
 get sounds and find cool additional graphic stuff.
 
 
